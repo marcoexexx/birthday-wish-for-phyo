@@ -9,6 +9,7 @@ import Lottie from "lottie-react";
 import { useEffect, useRef } from "react";
 import HTMLFlipBook from "react-pageflip";
 
+const nowYear = (new Date()).getFullYear();
 const duration = 1000 * 15;
 let animationEnd = 0;
 const defaults = {
@@ -34,7 +35,7 @@ function randomInRange(min: number, max: number) {
 
 function App() {
   const { timeLeft } = useCountdown(
-    new Date("2024-04-22T00:00:00"),
+    new Date(`${nowYear}-04-22T00:00:00`),
   );
 
   const timeIntervel = useRef<number | null>(null);
