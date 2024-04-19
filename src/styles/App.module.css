@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: .67rem;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.times {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  background: #eee;
+}
+
+.page p {
+  font-size: .85rem;
+}
+
+.page p img {
+  height: 50px;
+  position: absolute;
+  left: 0;
+  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
+  box-shadow: 1px 1px 3px #0008;
+  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+  z-index: 0;
+}
+
+.page p img:nth-child(1) {
+  offset-distance: 8%;
+}
+.page p img:nth-child(2) {
+  offset-distance: 19%;
+}
+.page p img:nth-child(3) {
+  offset-distance: 20%;
+}
+
+.click_me {
+  align-self: self-end;
+  margin: 28px 28px 0 0;
+  font-size: 1rem;
+}
