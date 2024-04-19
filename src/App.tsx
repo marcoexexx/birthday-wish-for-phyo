@@ -37,6 +37,7 @@ function randomInRange(min: number, max: number) {
 function App() {
   const { timeLeft } = useCountdown(
     new Date(`${nowYear}-04-22T00:00:00`),
+    // new Date(`${nowYear}-04-19T16:33:00`),
   );
   const timeIntervel = useRef<number | null>(null);
   const timeOut = useRef<number | null>(null);
@@ -129,6 +130,7 @@ function App() {
           }}
         >
           <h2>🎂 HAPPY BIRTHDAY 🎉 `PHYO PYAE THU`</h2>
+          <h3>──────&#160;&#160;A Day to Celebrate You!&#160;&#160;──────</h3>
           {/* @ts-ignore */}
           <HTMLFlipBook
             size="stretch"
