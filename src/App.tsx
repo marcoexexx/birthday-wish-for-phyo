@@ -2,6 +2,7 @@ import CakeAnimation from "@/assets/cake.json";
 import Phyo1 from "@/assets/photos/phyo1.jpg";
 import Phyo2 from "@/assets/photos/phyo2.jpg";
 import Phyo3 from "@/assets/photos/phyo3.jpg";
+import BirthdaySound from "@/assets/sounds/birthday.mp3";
 import { useCountdown } from "@/hooks";
 import styles from "@/styles/App.module.css";
 import Lottie from "lottie-react";
@@ -22,6 +23,9 @@ const images = [
   Phyo1,
   Phyo2,
   Phyo3,
+];
+const sounds = [
+  BirthdaySound,
 ];
 
 function randomInRange(min: number, max: number) {
@@ -48,8 +52,13 @@ function App() {
   }, []);
 
   useEffect(() => {
+    let audio: HTMLAudioElement | null = null;
+
     if (checkIsDone) {
-      console.log("show");
+      audio = new Audio(sounds[0]);
+      audio.loop = true;
+      audio.play();
+
       animationEnd = Date.now() + duration;
 
       timeIntervel.current = window.setInterval(() => {
@@ -70,6 +79,10 @@ function App() {
         );
       }, time);
     }
+
+    return () => {
+      audio?.remove();
+    };
   }, [checkIsDone]);
 
   return (
