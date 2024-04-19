@@ -89,7 +89,10 @@ function App() {
   return (
     <>
       <MetaTags>
-        <meta property="og:title" content="Birthday wish for 'Phyo Pyae Thu'" />
+        <meta
+          property="og:title"
+          content="Birthday wish for 'Phyo Pyae Thu'"
+        />
         <meta property="og:image" content="/assets/phyo1-guvbiUXa.jpg" />
       </MetaTags>
 
