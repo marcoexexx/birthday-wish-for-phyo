@@ -127,6 +127,7 @@ function App() {
             alignItems: "center",
             justifyContent: "center",
             opacity: checkIsDone ? "1" : "0",
+            pointerEvents: checkIsDone ? "auto" : "none"
           }}
         >
           <h2>🎂 HAPPY BIRTHDAY 🎉 `PHYO PYAE THU`</h2>
@@ -198,3 +199,4 @@ function App() {
 }
 
 export default App;
+        
