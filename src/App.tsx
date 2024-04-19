@@ -30,8 +30,7 @@ function randomInRange(min: number, max: number) {
 
 function App() {
   const { timeLeft } = useCountdown(
-    // new Date("2024-04-22T00:00:00"),
-    new Date("2024-04-19T10:36:00"),
+    new Date("2024-04-22T00:00:00"),
   );
 
   const timeIntervel = useRef<number | null>(null);
