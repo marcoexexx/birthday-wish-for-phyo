@@ -7,6 +7,7 @@ import { useCountdown } from "@/hooks";
 import styles from "@/styles/App.module.css";
 import Lottie from "lottie-react";
 import { useEffect, useRef } from "react";
+import MetaTags from "react-meta-tags";
 import HTMLFlipBook from "react-pageflip";
 
 const nowYear = (new Date()).getFullYear();
@@ -37,7 +38,6 @@ function App() {
   const { timeLeft } = useCountdown(
     new Date(`${nowYear}-04-22T00:00:00`),
   );
-
   const timeIntervel = useRef<number | null>(null);
   const timeOut = useRef<number | null>(null);
 
@@ -88,6 +88,11 @@ function App() {
 
   return (
     <>
+      <MetaTags>
+        <meta property="og:title" content="Birthday wish for 'Phyo Pyae Thu'" />
+        <meta property="og:image" content="/assets/phyo1-guvbiUXa.jpg" />
+      </MetaTags>
+
       <div className={styles.container}>
         <div className={styles.content}>
           <h1>Countdown to `Phyo` birthday: 🎂</h1>
