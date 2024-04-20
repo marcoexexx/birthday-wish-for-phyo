@@ -40,16 +40,18 @@
   left: 0;
   offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
   box-shadow: 1px 1px 3px #0008;
-  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77, -1.17, .75, .84), box-shadow .3s, z-index .3s;
   z-index: 0;
 }
 
 .page p img:nth-child(1) {
   offset-distance: 8%;
 }
+
 .page p img:nth-child(2) {
   offset-distance: 19%;
 }
+
 .page p img:nth-child(3) {
   offset-distance: 20%;
 }
@@ -58,4 +60,15 @@
   align-self: self-end;
   margin: 28px 28px 0 0;
   font-size: 1rem;
+}
+
+.open_here {
+  position: absolute;
+  align-self: flex-start;
+}
+
+.open_here img {
+  width: 130px;
+
+  pointer-events: none;
 }
