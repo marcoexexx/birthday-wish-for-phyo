@@ -67,7 +67,18 @@
   align-self: flex-start;
 }
 
+.twenty {
+  position: absolute;
+  align-self: flex-end;
+}
+
 .open_here img {
+  width: 130px;
+
+  pointer-events: none;
+}
+
+.twenty img {
   width: 130px;
 
   pointer-events: none;
