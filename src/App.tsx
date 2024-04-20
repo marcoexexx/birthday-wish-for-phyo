@@ -2,6 +2,7 @@ import CakeAnimation from "@/assets/cake.json";
 import Phyo1 from "@/assets/photos/phyo1.jpg";
 import Phyo2 from "@/assets/photos/phyo2.jpg";
 import Phyo3 from "@/assets/photos/phyo3.jpg";
+import OpenHere from "@/assets/open_here.png";
 import BirthdaySound from "@/assets/sounds/birthday.mp3";
 import { useCountdown } from "@/hooks";
 import styles from "@/styles/App.module.css";
@@ -37,7 +38,7 @@ function randomInRange(min: number, max: number) {
 function App() {
   const { timeLeft } = useCountdown(
     new Date(`${nowYear}-04-22T00:00:00`),
-    // new Date(`${nowYear}-04-19T16:33:00`),
+    // new Date(`${nowYear}-04-20T17:44:00`),
   );
   const timeIntervel = useRef<number | null>(null);
   const timeOut = useRef<number | null>(null);
@@ -59,7 +60,7 @@ function App() {
     if (checkIsDone) {
       audio = new Audio(sounds[0]);
       audio.loop = true;
-      audio.play();
+      // audio.play();
 
       animationEnd = Date.now() + duration;
 
@@ -132,6 +133,11 @@ function App() {
         >
           <h2>🎂 HAPPY BIRTHDAY 🎉 `PHYO PYAE THU`</h2>
           <h3>──────&#160;&#160;A Day to Celebrate You!&#160;&#160;──────</h3>
+          
+          <div className={styles.open_here}>
+            <img src={OpenHere} />
+          </div>
+          
           {/* @ts-ignore */}
           <HTMLFlipBook
             size="stretch"
