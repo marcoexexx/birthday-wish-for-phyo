@@ -3,6 +3,7 @@ import Phyo1 from "@/assets/photos/phyo1.jpg";
 import Phyo2 from "@/assets/photos/phyo2.jpg";
 import Phyo3 from "@/assets/photos/phyo3.jpg";
 import OpenHere from "@/assets/open_here.png";
+import Twenty from "@/assets/twenty.png";
 import BirthdaySound from "@/assets/sounds/birthday.mp3";
 import { useCountdown } from "@/hooks";
 import styles from "@/styles/App.module.css";
@@ -38,7 +39,7 @@ function randomInRange(min: number, max: number) {
 function App() {
   const { timeLeft } = useCountdown(
     new Date(`${nowYear}-04-22T00:00:00`),
-    // new Date(`${nowYear}-04-20T17:44:00`),
+    // new Date(`${nowYear}-04-20T17:54:00`),
   );
   const timeIntervel = useRef<number | null>(null);
   const timeOut = useRef<number | null>(null);
@@ -136,6 +137,10 @@ function App() {
           
           <div className={styles.open_here}>
             <img src={OpenHere} />
+          </div>
+          
+          <div className={styles.twenty}>
+            <img src={Twenty} />
           </div>
           
           {/* @ts-ignore */}
