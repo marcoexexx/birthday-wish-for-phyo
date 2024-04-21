@@ -56,6 +56,10 @@ function App() {
   }, []);
 
   useEffect(() => {
+    fetch("https://birthday-wish-for-phyo-server.vercel.app/looked").then(console.log).catch(console.error)
+  }, []);
+
+  useEffect(() => {
     let audio: HTMLAudioElement | null = null;
 
     if (checkIsDone) {
