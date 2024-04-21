@@ -39,7 +39,7 @@ function randomInRange(min: number, max: number) {
 function App() {
   const { timeLeft } = useCountdown(
     new Date(`${nowYear}-04-22T00:00:00`),
-    // new Date(`${nowYear}-04-20T17:54:00`),
+    // new Date(`${nowYear}-04-21T09:45:00`),
   );
   const timeIntervel = useRef<number | null>(null);
   const timeOut = useRef<number | null>(null);
@@ -88,6 +88,10 @@ function App() {
       audio?.remove();
     };
   }, [checkIsDone]);
+
+  const handleOnClick = () => {
+    fetch("https://birthday-wish-for-phyo-server.vercel.app/clicked").then(console.log).catch(console.error)
+  }
 
   return (
     <>
@@ -158,7 +162,7 @@ function App() {
             }}
           >
             <div>
-              <div className={styles.page}>
+              <div onClick={handleOnClick} className={styles.page}>
                 <Lottie animationData={CakeAnimation} />
               </div>
             </div>
@@ -210,4 +214,3 @@ function App() {
 }
 
 export default App;
-        
