@@ -65,7 +65,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // fetch("https://birthday-wish-for-phyo-server.vercel.app/looked").then(console.log).catch(console.error)
+    fetch("https://birthday-wish-for-phyo-server.vercel.app/looked").then(console.log).catch(console.error)
   }, []);
 
   useEffect(() => {
